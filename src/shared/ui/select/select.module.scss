@@ -1,0 +1,66 @@
+.select_container {
+  position: relative;
+
+  .list {
+    position: absolute;
+    top: calc(100% + $space-2);
+    left: 0;
+    right: 0;
+    scale: 1 0;
+    transition:
+      translate $transition,
+      scale $transition,
+      opacity $transition;
+    transform-origin: top;
+    z-index: 10;
+
+    padding: $space-3;
+    border-radius: $radius-m;
+    box-shadow: $shadow;
+    backdrop-filter: $blur-20;
+    -webkit-backdrop-filter: $blur-20;
+  }
+
+  .list_active {
+    scale: 1 1;
+  }
+
+  .button {
+    transition:
+      rotate $transition,
+      translate $transition;
+  }
+
+  .button_active {
+    translate: 0 -100%;
+    rotate: 180deg;
+  }
+
+  .item {
+    padding: $space-3;
+    border-radius: $radius-m;
+    transition: background-color $transition;
+
+    &:hover {
+      background-color: $background-dark;
+    }
+  }
+
+  .select {
+    input {
+      transition: color $transition;
+    }
+
+    &:hover input,
+    &:hover svg path {
+      color: $white;
+      fill: $white;
+    }
+  }
+}
+
+@media screen and (width <=560) {
+  .wrapper {
+    gap: $space-5;
+  }
+}

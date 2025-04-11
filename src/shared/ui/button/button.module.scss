@@ -1,0 +1,17 @@
+.button {
+  display: grid;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
+  transition: all $transition !important;
+  border-radius: $radius-m;
+  user-select: none;
+
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

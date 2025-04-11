@@ -8,7 +8,7 @@ import { Button } from "~/src/shared/ui/button";
 export default function ContactForm() {
   const { formData, handleChange, handleSend } = useContacts();
   return (
-    <>
+    <form action="#" className="flex-column gap-5">
       <div className={`${classes.container} flex-column gap-3`}>
         <TextInput
           name="email"
@@ -32,6 +32,6 @@ export default function ContactForm() {
           <span className="text-white text-16">Submit</span>
         </Button>
       </div>
-    </>
+    </form>
   );
 }

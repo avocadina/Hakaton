@@ -15,3 +15,56 @@
     transform: scale(0.95);
   }
 }
+
+.size_0 {
+  padding: 0;
+}
+
+.size_12_16 {
+  padding: $space-3 $space-4;
+}
+
+.size_16_24 {
+  padding: $space-4 $space-6;
+}
+
+.size_12_24 {
+  padding: $space-3 $space-6;
+}
+
+.black {
+  background: $black;
+  color: $white;
+  border: 1px solid $black;
+
+  svg path {
+    fill: $light-gray;
+  }
+
+  &:hover {
+    border: 1px solid $black;
+    background: transparent;
+
+    span {
+      color: $black;
+    }
+
+    svg path {
+      fill: initial;
+    }
+  }
+}
+
+.white {
+  background: $light-gray;
+  color: $black;
+
+  &:hover {
+    background: transparent;
+    color: $light-gray;
+
+    svg path {
+      fill: $light-gray;
+    }
+  }
+}

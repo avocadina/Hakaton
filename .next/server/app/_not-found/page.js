@@ -178,6 +178,7 @@
       7566: (e) => {
         e.exports = {
           ellipsis: "client-layout_ellipsis__6enrQ",
+          "text-12": "client-layout_text-12__pV8mf",
           "text-16": "client-layout_text-16__eeTFi",
           "text-18": "client-layout_text-18__UprlN",
           "text-20": "client-layout_text-20__zlwmT",
@@ -191,8 +192,10 @@
           "font-medium": "client-layout_font-medium__jaG_W",
           "font-bold": "client-layout_font-bold__S4wOV",
           uppercase: "client-layout_uppercase__i7pkO",
+          "text-black": "client-layout_text-black__J0AFu",
           "text-green": "client-layout_text-green__wDUhK",
           "text-gray": "client-layout_text-gray__1efZN",
+          "text-white": "client-layout_text-white__dlO7l",
           "text-center": "client-layout_text-center__1Jufp",
           "text-left": "client-layout_text-left__dRw_Y",
           client__layout: "client-layout_client__layout__eZx0p",

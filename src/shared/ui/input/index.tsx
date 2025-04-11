@@ -1,7 +1,6 @@
 import React, { ChangeEvent, FC } from "react";
 
 import classes from "./input.module.scss";
-import { Button } from "../button";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
@@ -14,6 +13,8 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   RightIcon?: React.FC<React.SVGProps<SVGSVGElement>>;
   rightIconClick?: () => void;
   classNameRightIcon?: string;
+  label?: string;
+  classNameLabel?: string;
 }
 
 const Input: FC<Props> = (props) => {
@@ -28,6 +29,8 @@ const Input: FC<Props> = (props) => {
     RightIcon,
     rightIconClick,
     classNameRightIcon,
+    label,
+    classNameLabel,
     ...rest
   } = props;
 
@@ -40,8 +43,15 @@ const Input: FC<Props> = (props) => {
   };
 
   return (
-    <div className={`${className} ${classes.container} column`}>
-      <label htmlFor={name}>
+    <div className={` ${classes.container} column`}>
+      <label htmlFor={name} className="flex-column gap-3">
+        {label && (
+          <span
+            className={`text-14 text-black ${classNameLabel} ${classes.label}`}
+          >
+            {label}
+          </span>
+        )}
         <input
           {...rest}
           name={name ?? ""}
@@ -50,7 +60,7 @@ const Input: FC<Props> = (props) => {
           placeholder={placeholder}
           value={value}
           onChange={changeEvent}
-          className={`${classes.input}`}
+          className={`${classes.input} ${className}`}
         />
       </label>
       {RightIcon && (

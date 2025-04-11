@@ -8,7 +8,7 @@
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  right: $space-5;
+  right: $space-4;
   width: fit-content;
   aspect-ratio: 1;
 }
@@ -16,17 +16,22 @@
 .input {
   max-width: unset;
   width: 100%;
-  padding: $space-5;
+  padding: $space-4;
   border-radius: $radius-m;
-  background: $background-light !important;
+  background: $light-gray !important;
 
-  color: $gray;
-  font-size: 18px;
+  color: $black;
+  font-size: 14px;
   font-style: normal;
   font-weight: 450;
   line-height: normal;
 
   &::placeholder {
-    color: $gray-2;
+    color: $black;
+    opacity: 0.7;
   }
+}
+
+.label {
+  translate: 5px 0;
 }

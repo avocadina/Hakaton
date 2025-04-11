@@ -2,11 +2,11 @@ import React, { FC } from "react";
 
 import classes from "./button.module.scss";
 
-export type TButtonType = "green" | "blue" | "gray" | "ghost" | "link";
+export type TButtonType = "white" | "black" | "ghost" | "link";
 
 export interface IButton extends React.HTMLAttributes<HTMLButtonElement> {
   typeButton: TButtonType;
-  size: "0" | "";
+  size: "0" | "12-16" | "16-24" | "12-24";
   isDisabled?: boolean;
   isLoading?: boolean;
   needSvgHover?: boolean;
@@ -26,12 +26,10 @@ const Button: FC<IButton> = (props) => {
   } = props;
 
   const typesRenderCondition = () => {
-    if (typeButton === "green") {
-      return classes.green;
-    } else if (typeButton === "gray") {
-      return classes.gray;
-    } else if (typeButton === "blue") {
-      return classes.blue;
+    if (typeButton === "black") {
+      return classes.black;
+    } else if (typeButton === "white") {
+      return classes.white;
     } else if (typeButton === "ghost") {
       return classes.ghost;
     } else if (typeButton === "link") {
@@ -42,6 +40,12 @@ const Button: FC<IButton> = (props) => {
   const sizesRenderCondition = () => {
     if (size === "0") {
       return classes.size_0;
+    } else if (size === "12-16") {
+      return classes.size_12_16;
+    } else if (size === "16-24") {
+      return classes.size_16_24;
+    } else if (size === "12-24") {
+      return classes.size_12_24;
     }
   };
 

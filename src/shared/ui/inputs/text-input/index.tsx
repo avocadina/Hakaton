@@ -13,6 +13,7 @@ interface Props {
   value?: string;
   name?: string;
   classNameRightIcon?: string;
+  label?: string;
 }
 
 export default function TextInput(props: Props) {
@@ -26,11 +27,12 @@ export default function TextInput(props: Props) {
     value,
     name,
     classNameRightIcon,
+    label,
   } = props;
 
   return (
     <Input
-      className={`${className} ${classes.input}`}
+      className={`${classes.input} ${className}`}
       rightIconClick={rightIconClick}
       RightIcon={rightIcon}
       placeholder={placholder}
@@ -40,6 +42,7 @@ export default function TextInput(props: Props) {
       type={"text"}
       name={name}
       classNameRightIcon={classNameRightIcon}
+      label={label}
     />
   );
 }
